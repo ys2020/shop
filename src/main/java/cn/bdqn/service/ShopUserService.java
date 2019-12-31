@@ -1,7 +1,5 @@
 package cn.bdqn.service;
 
-import cn.bdqn.pojo.ShopUser;
-
 public interface ShopUserService {
     int deleteByPrimaryKey(Integer id);
 

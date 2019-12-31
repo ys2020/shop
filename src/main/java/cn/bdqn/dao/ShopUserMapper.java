@@ -1,6 +1,7 @@
 package cn.bdqn.dao;
 
 import cn.bdqn.pojo.ShopUser;
+
 public interface ShopUserMapper {
     int deleteByPrimaryKey(Integer id);
 

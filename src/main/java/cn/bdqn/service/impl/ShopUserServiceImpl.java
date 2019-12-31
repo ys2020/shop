@@ -1,7 +1,6 @@
 package cn.bdqn.service.impl;
 
 import cn.bdqn.dao.ShopUserMapper;
-import cn.bdqn.pojo.ShopUser;
 import cn.bdqn.service.ShopUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
