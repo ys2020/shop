@@ -28,5 +28,8 @@ jQuery(function($){
 })
 		$(".return_top").click(function(){
 			ds.scrollTo(0, 0);
-			hideReturnTop();})
+			hideReturnTop();});
+
+
+
 })();

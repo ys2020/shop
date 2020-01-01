@@ -44,7 +44,7 @@ dt + dd {margin-top: 0;}
 .marqueenTwo .demo{margin-left:80px ;}
 
 
-.mod-vip,.advTip{display: none;}
+
 
 /*标题*/
 .shopTitle{text-align: center;width: 100%;overflow: hidden;background:#eee ;}
@@ -713,9 +713,10 @@ filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#f8c375',endCo
 .member-logout{height: 25px;overflow: hidden;display: block;}
 .member-logout .btn{width:95px;margin-right:3px;height: 25px;display: inline-block;line-height: 25px;text-align: center;}
 
-.member-login{overflow: hidden;height:36px;display: none;}
-.member-login a {float: left;margin-left: -1px;width:50px;text-align: center;border-left: 1px solid #EEE;}
-.member-login a strong {height: 18px;display: block;font-size: 14px;color: #F40;}
+.shou-huo ul {display: flex}
+.shou-huo li {margin-right: 8px;}
+.shou-huo li a {text-decoration: none;}
+
     
 .advTip{display:block;width:100% ;position: absolute;bottom:2px;left:0px}    
 .advTip img{width:100% ;}  

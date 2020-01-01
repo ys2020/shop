@@ -62,4 +62,14 @@ public class ShopUser {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+    public ShopUser() {
+    }
+
+    public ShopUser(String username, String password, String email, String phone) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+    }
 }

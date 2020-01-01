@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 羊来
@@ -13,15 +14,15 @@
 
     <title>首页</title>
 
-    <link href="/statics/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="/statics/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
 
-    <link href="/statics/basic/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="../../statics/basic/css/demo.css" rel="stylesheet" type="text/css" />
 
-    <link href="/statics/css/hmstyle.css" rel="stylesheet" type="text/css"/>
-    <link href="/statics/css/skin.css" rel="stylesheet" type="text/css" />
-    <script src="/statics/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-    <script src="/statics/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+    <link href="../../statics/css/hmstyle.css" rel="stylesheet" type="text/css"/>
+    <link href="../../statics/css/skin.css" rel="stylesheet" type="text/css" />
+    <script src="../../statics/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+    <script src="../../statics/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
 
 </head>
 
@@ -76,9 +77,9 @@
     <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
         <ul class="am-slides">
             <li class="banner1"><a href="home/introduction.html"><img src="../../statics/images/ad1.jpg" /></a></li>
-            <li class="banner2"><a><img src="/statics/images/ad2.jpg" /></a></li>
-            <li class="banner3"><a><img src="/statics/images/ad3.jpg" /></a></li>
-            <li class="banner4"><a><img src="/statics/images/ad4.jpg" /></a></li>
+            <li class="banner2"><a><img src="../../statics/images/ad2.jpg" /></a></li>
+            <li class="banner3"><a><img src="../../statics/images/ad3.jpg" /></a></li>
+            <li class="banner4"><a><img src="../../statics/images/ad4.jpg" /></a></li>
 
         </ul>
     </div>
@@ -111,7 +112,7 @@
                         <ul class="category-list" id="js_climit_li">
                             <li class="appliance js_toggle relative first">
                                 <div class="category-info">
-                                    <h3 class="category-name b-category-name"><i><img src="../../../../../../../shop1/shopping/one/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
+                                    <h3 class="category-name b-category-name"><i><img src="../../statics/images/cake.png"></i><a class="ml-22" title="点心">点心/蛋糕</a></h3>
                                     <em>&gt;</em></div>
                                 <div class="menu-item menu-in top">
                                     <div class="area-in">
@@ -688,6 +689,38 @@
         <!--走马灯 -->
 
         <div class="marqueen">
+            <div class="mod-vip">
+                <div class="m-baseinfo">
+                    <a href="../person/index.html">
+                        <img src="../../statics/images/getAvatar.do.jpg">
+                    </a>
+                    <em>
+                        Hi,<span class="s-name">${sessionScope.loginUser==null ? "请登录": sessionScope.loginUser.getUsername()}</span>
+                        <a href="#"><p>点击更多优惠活动</p></a>
+                    </em>
+                </div>
+                <c:if test="${sessionScope.loginUser==null}">
+                    <div class="member-logout">
+                        <a class="am-btn-warning btn" href="WEB-INF/jsp/home/login.html">登录</a>
+                        <a class="am-btn-warning btn" href="home/register.html">注册</a>
+                    </div>
+                </c:if>
+                <div class="">
+                    <ul style="display: flex;">
+                        <li style="margin:0 20px">3</li>
+                        <li style="margin:0 20px">3</li>
+                        <li style="margin:0 20px">3</li>
+                        <li style="margin:0 20px">3</li>
+                    </ul>
+                    <ul style="display: flex;" class="huo">
+                        <li style="margin-right: 8px"><a href="" style="text-decoration: none">待收货</a></li>
+                        <li style="margin-right: 8px"><a href="" style="text-decoration: none">待发货</a></li>
+                        <li style="margin-right: 8px"><a href="" style="text-decoration: none">待付款</a></li>
+                        <li style="margin-right: 8px"><a href="" style="text-decoration: none">待评价</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
             <span class="marqueen-title">商城头条</span>
             <div class="demo">
 
@@ -698,39 +731,15 @@
                     </a></li>
                     <li class="title-first"><a target="_blank" href="#">
                         <span>[公告]</span>商城与广州市签署战略合作协议
-                        <img src="../../../../../../../shop1/shopping/one/images/TJ.jpg"></img>
+                        <img src="../../statics/images/TJ.jpg"></img>
                         <p>XXXXXXXXXXXXXXXXXX</p>
                     </a></li>
-
-                    <div class="mod-vip">
-                        <div class="m-baseinfo">
-                            <a href="../person/index.html">
-                                <img src="../../../../../../../shop1/shopping/one/images/getAvatar.do.jpg">
-                            </a>
-                            <em>
-                                Hi,<span class="s-name">小叮当</span>
-                                <a href="#"><p>点击更多优惠活动</p></a>
-                            </em>
-                        </div>
-                        <div class="member-logout">
-                            <a class="am-btn-warning btn" href="WEB-INF/jsp/home/login.html">登录</a>
-                            <a class="am-btn-warning btn" href="home/register.html">注册</a>
-                        </div>
-                        <div class="member-login">
-                            <a href="#"><strong>0</strong>待收货</a>
-                            <a href="#"><strong>0</strong>待发货</a>
-                            <a href="#"><strong>0</strong>待付款</a>
-                            <a href="#"><strong>0</strong>待评价</a>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-
                     <li><a target="_blank" href="#"><span>[特惠]</span>洋河年末大促，低至两件五折</a></li>
                     <li><a target="_blank" href="#"><span>[公告]</span>华北、华中部分地区配送延迟</a></li>
                     <li><a target="_blank" href="#"><span>[特惠]</span>家电狂欢千亿礼券 买1送1！</a></li>
 
                 </ul>
-                <div class="advTip"><img src="../../../../../../../shop1/shopping/one/images/advTip.jpg"/></div>
+                <div class="advTip"><img src="../../statics/images/advTip.jpg"/></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -759,7 +768,7 @@
 
         <div class="am-g am-g-fixed recommendation">
             <div class="clock am-u-sm-3" ">
-            <img src="../../../../../../../shop1/shopping/one/images/2016.png "></img>
+            <img src="../../statics/images/2016.png "></img>
             <p>今日<br>推荐</p>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -768,7 +777,7 @@
                 <h4>开年福利篇</h4>
             </div>
             <div class="recommendationMain one">
-                <a href="home/introduction.html"><img src="../../../../../../../shop1/shopping/one/images/tj.png "></img></a>
+                <a href="home/introduction.html"><img src="../../statics/images/tj.png "></img></a>
             </div>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -777,7 +786,7 @@
                 <h4>让爱早回家</h4>
             </div>
             <div class="recommendationMain two">
-                <img src="../../../../../../../shop1/shopping/one/images/tj1.png "></img>
+                <img src="../../statics/images/tj1.png "></img>
             </div>
         </div>
         <div class="am-u-sm-4 am-u-lg-3 ">
@@ -786,7 +795,7 @@
                 <h4>甜甜蜜蜜</h4>
             </div>
             <div class="recommendationMain three">
-                <img src="../../../../../../../shop1/shopping/one/images/tj2.png "></img>
+                <img src="../../statics/images/tj2.png "></img>
             </div>
         </div>
 
@@ -807,7 +816,7 @@
                 <div class="icon-sale one "></div>
                 <h4>秒杀</h4>
                 <div class="activityMain ">
-                    <img src="../../../../../../../shop1/shopping/one/images/activity1.jpg "></img>
+                    <img src="../../statics/images/activity1.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -818,7 +827,7 @@
                 <div class="icon-sale two "></div>
                 <h4>特惠</h4>
                 <div class="activityMain ">
-                    <img src="../../../../../../../shop1/shopping/one/images/activity2.jpg "></img>
+                    <img src="../../statics/images/activity2.jpg "></img>
                 </div>
                 <div class="info ">
                     <h3>春节送礼优选</h3>
@@ -892,7 +901,7 @@
                             零食大礼包
                         </div>
                     </div>
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                 </a>
                 <div class="triangle-topright"></div>
             </div>
@@ -1011,7 +1020,7 @@
                     <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
                 </div>
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -1022,7 +1031,7 @@
             </div>
             <div class="am-u-sm-4 text-four">
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/6.jpg" />
+                    <img src="../../statics/images/6.jpg" />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -1152,7 +1161,7 @@
                             零食大礼包
                         </div>
                     </div>
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                 </a>
                 <div class="triangle-topright"></div>
             </div>
@@ -1220,7 +1229,7 @@
                     </div>
                     <i class="am-icon-shopping-basket am-icon-md  seprate"></i>
                 </div>
-                <a href="# "><img src="../../../../../../../shop1/shopping/one/images/4.jpg" /></a>
+                <a href="# "><img src="../../statics/images/4.jpg" /></a>
             </div>
 
             <div class="am-u-sm-3 am-u-md-2 text-three last big ">
@@ -1282,7 +1291,7 @@
             </div>
             <div class="am-u-sm-4 text-four">
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/6.jpg" />
+                    <img src="../../statics/images/6.jpg" />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -1412,7 +1421,7 @@
                             零食大礼包
                         </div>
                     </div>
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                 </a>
                 <div class="triangle-topright"></div>
             </div>
@@ -1599,7 +1608,7 @@
             </div>
             <div class="am-u-sm-6 am-u-md-3 text-five sug">
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/9.jpg" />
+                    <img src="../../statics/images/9.jpg" />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -1673,7 +1682,7 @@
                             零食大礼包
                         </div>
                     </div>
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                 </a>
                 <div class="triangle-topright"></div>
             </div>
@@ -1873,7 +1882,7 @@
             </div>
             <div class="am-u-sm-6 am-u-md-3 text-five big">
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/10.jpg" />
+                    <img src="../../statics/images/10.jpg" />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -1931,7 +1940,7 @@
                             零食大礼包
                         </div>
                     </div>
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                 </a>
                 <div class="triangle-topright"></div>
             </div>
@@ -2050,7 +2059,7 @@
                     <a class="outer" href="#"><span class="inner"><b class="text">核桃</b></span></a>
                 </div>
                 <a href="# ">
-                    <img src="../../../../../../../shop1/shopping/one/images/act1.png " />
+                    <img src="../../statics/images/act1.png " />
                     <div class="outer-con ">
                         <div class="title ">
                             雪之恋和风大福
@@ -2196,7 +2205,7 @@
                 </a>
                 <div class="ibar_login_box status_login ">
                     <div class="avatar_box ">
-                        <p class="avatar_imgbox "><img src="../../../../../../../shop1/shopping/one/images/no-img_mid_.jpg " /></p>
+                        <p class="avatar_imgbox "><img src="../../statics/images/no-img_mid_.jpg " /></p>
                         <ul class="user_info ">
                             <li>用户名sl1903</li>
                             <li>级&nbsp;别普通会员</li>
@@ -2241,7 +2250,7 @@
 
             <div id="brand " class="item ">
                 <a href="#">
-                    <span class="wdsc "><img src="../../../../../../../shop1/shopping/one/images/wdsc.png " /></span>
+                    <span class="wdsc "><img src="../../statics/images/wdsc.png " /></span>
                 </a>
                 <div class="mp_tooltip ">
                     我的收藏
@@ -2351,7 +2360,15 @@
 <script>
     window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
 </script>
-<script type="text/javascript " src="../../../../../../../shop1/shopping/one/basic/js/quick_links.js "></script>
+<script type="text/javascript " src="../../statics/basic/js/quick_links.js "></script>
 </body>
-
+<script >
+    $(function () {
+        $(".huo li a").hover(function(){
+            $(this).css("color","red");
+        },function(){
+            $(this).css("color","black");
+        });
+    })
+</script>
 </html>
